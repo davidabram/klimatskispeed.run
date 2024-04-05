@@ -1,0 +1,45 @@
+---
+interface Props {
+	name: string;
+  region: string;
+  category: string;
+  time: string;
+  status: string;
+  statusColor: string;
+  videoProofUrl: string;
+  position: number;
+}
+
+const { name, region, category, time, status, statusColor, videoProofUrl, position } = Astro.props;
+---
+
+<tr>
+  <td class="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
+    <div class="flex items-center">
+      <div class="mr-4">
+        <div class="font-medium text-xl text-gray-900">{position}.</div>
+      </div>
+      <div class="h-11 w-11 flex-shrink-0">
+        <img class="h-11 w-11 rounded-full" src={`https://api.dicebear.com/8.x/initials/svg?seed=${name}`} alt="avatar" />
+      </div>
+      <div class="ml-4">
+        <div class="font-medium text-xl text-gray-900">{name}</div>
+      </div>
+    </div>
+  </td>
+  <td class="whitespace-nowrap px-3 py-5 text-gray-500">
+    <div class="text-gray-900 text-xl">{time}</div>
+  </td>
+  <td class="whitespace-nowrap px-3 py-5 text-gray-500">
+    <div class="text-gray-900 text-lg">{region}</div>
+  </td>
+  <td class="whitespace-nowrap px-3 py-5 text-gray-500">
+    <div class="text-gray-900 text-lg">{category}</div>
+  </td>
+  <td class="whitespace-nowrap px-3 py-5 text-gray-500">
+    <span class={`inline-flex items-center rounded-md  px-2 py-1 text-md font-medium ${statusColor}  ring-1 ring-inset ring-green-600/20`}>{status}</span>
+  </td>
+  <td class="whitespace-nowrap px-3 py-5 text-gray-500">
+    { videoProofUrl ? <a href={videoProofUrl} class="text-gray-900" target="_blank">LINK 🔗</a> : <span class="text-gray-500">N/A</span> }
+  </td>
+</tr>

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Row from '../components/Row.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Rezultati - Klimatski portal Speedrun">
+  <Header />
+	<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <h1 class="text-2xl font-semibold leading-6 text-gray-900">Rezultati</h1>
+      <p class="mt-2 mb-2 text-lg text-gray-700">😆 Klimatski portal ANY% Speedrun 😆</p>
+        <table class="min-w-full divide-y divide-gray-300">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Speedrunner</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Rezultat (mm:ss)</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Kategorija</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Regija</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Video Dokaza</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <Row
+              name="Faktograf.hr"
+              region="Facebook"
+              time="198K Eura"
+              category="Any%"
+              status="Osigurano"
+              statusColor="bg-green-100 text-green-800"
+              videoProofUrl="https://npoo.aem.hr/wp-content/uploads/sites/2/2023/07/REZULTATI_Javni-poziv-za-uspostavu-sustava-provjere-tocnosti-informacija.pdf"
+              position={1}
+            />
+            <Row
+              name="Mario Nakić"
+              region="53nja"
+              time="0:00"
+              category="Any%"
+              status="Nepotvrđeno"
+              statusColor="bg-red-100 text-red-800"
+              videoProofUrl=""
+              position={2}
+            />
+            <Row
+              name="Marko Fale"
+              region="Zagreb"
+              time="0:25"
+              category="Any%"
+              status="Potvrđeno"
+              statusColor="bg-green-100 text-green-800"
+              videoProofUrl=""
+              position={3}
+            />
+            <Row
+              name="Renata Feur"
+              region="Zagreb"
+              time="0:30"
+              category="Any%"
+              status="Potvrđeno"
+              statusColor="bg-green-100 text-green-800"
+              videoProofUrl=""
+              position={4}
+            />
+            <Row
+              name="David Abram"
+              region="Lanište"
+              time="2:06"
+              category="Any%"
+              status="Potvrđeno"
+              statusColor="bg-green-100 text-green-800"
+              videoProofUrl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              position={5}
+            />
+            <Row
+              name="Velimir Ujević"
+              region="Imocki"
+              time="3:05"
+              category="Any%"
+              status="Potvrđeno"
+              statusColor="bg-green-100 text-green-800"
+              videoProofUrl=""
+              position={6}
+            />
+            <Row
+              name="Damir Nikšić"
+              region="Australija"
+              time="35:00"
+              category="Any%"
+              status="Potvrđeno"
+              statusColor="bg-green-100 text-green-800"
+              videoProofUrl=""
+              position={7}
+            />
+          </tbody>
+        </table>
+	</main>
+</Layout>
